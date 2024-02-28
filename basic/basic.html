@@ -4,6 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .ecosystem {
+        color: red;
+      }
+      .animal {
+        color: blue;
+      }
+
+      /* 동일한 영역에 대해 선택자가 달라진다면 기본우선순위(작성순서)와 다르게 돌아감 */
+      #text {
+        color: green;
+      }
+      #text {
+        color: lightsalmon !important;
+      }
+      .area p {
+        color: blueviolet;
+      }
+
+      p {
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <!-- 
@@ -23,6 +46,41 @@
             color:blue;
             font-size:12px;
         }
+
+        css
+        - 상속(주로 글자를 다루는 속성들이 상속)
+        - 동일한 요소에 대해 여러번 디자인 지정 가능(최종 아래쪽에 선언된 디자인이 우선)
+        - 선택자 우선순위
+          1등 : !important
+          2등 : 인라인(태그에 직접 작성)
+          3등 : 아이디(#)
+          4등 : 클래스(.)
+          5등 : 일반 태그
+          6등 : 전체(*)
+          7등 : 상속
+          가상 클래스 : hover, link,... ==> 클래스(4등)로 간주
+          가상 요소 : ::before, ::after ==> 일반태그(5등)로 간주
+          부정 : :not() ==> 우선순위 없음
+        - 선택자가 동일하다면 작성 순서(위에서 아래로)
+
+        .list li.item
      -->
+    <div class="ecosystem">
+      <div class="animal">
+        동물
+        <div class="tiger">호랑이</div>
+        <div class="lion">사자</div>
+        <div class="elephant">코끼리</div>
+      </div>
+      <div class="plant">식물</div>
+    </div>
+    <div class="area">
+      <p id="text" style="color: hotpink">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente obcaecati voluptate illum repudiandae cupiditate consequuntur
+        maiores pariatur voluptatum repellendus, rerum earum! Esse iure, aliquam modi doloremque temporibus distinctio, blanditiis reiciendis numquam
+        atque quo, unde exercitationem. Unde, nobis necessitatibus animi, obcaecati recusandae praesentium suscipit eum fuga aliquid delectus commodi
+        a.
+      </p>
+    </div>
   </body>
 </html>
