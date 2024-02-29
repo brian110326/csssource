@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        background-color: #333;
+        list-style-type: none;
+      }
+
+      li a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 16px;
+        display: inline-block;
+      }
+      .container li {
+        float: left;
+      }
+      li:hover {
+        background-color: blueviolet;
+      }
+      a.active {
+        background-color: red;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container clearfix">
+      <li>
+        <a href="#" class="active">Home</a>
+      </li>
+      <li>
+        <a href="#">News</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </body>
+</html>

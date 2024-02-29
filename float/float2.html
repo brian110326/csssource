@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 100px;
+        background-color: red;
+        color: white;
+        font-size: 30px;
+        margin: 10px;
+        float: left;
+      }
+
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: violet;
+        /* clear: both; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- float된 요소들을 감싸는 요소를 만들고 ::after 비어있게 그리고 clear:both -->
+    <div class="clearfix">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+
+    <div class="box1">4</div>
+  </body>
+</html>
