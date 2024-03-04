@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .column {
+        width: 25%;
+        padding: 20px;
+        float: left;
+      }
+      .column:first-child {
+        background-color: #aaa;
+      }
+      .column:nth-child(2) {
+        background-color: #bbb;
+      }
+      .column:nth-child(3) {
+        background-color: #ccc;
+      }
+      .column:last-child {
+        background-color: #ddd;
+      }
+      @media screen and (min-width: 601px) and (max-width: 992px) {
+        .column {
+          width: 50%;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Responsive Four Column Layout</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, repudiandae. Eaque atque deserunt officia harum asperiores rerum, a aut ipsa
+      molestias doloremque inventore, mollitia totam iste nisi sit. Aspernatur, non.
+    </p>
+
+    <div class="row">
+      <div class="column">
+        <h2>Column 1</h2>
+        <p>Some text1...</p>
+      </div>
+      <div class="column">
+        <h2>Column 2</h2>
+        <p>Some text2...</p>
+      </div>
+      <div class="column">
+        <h2>Column 3</h2>
+        <p>Some text3...</p>
+      </div>
+      <div class="column">
+        <h2>Column 4</h2>
+        <p>Some text4...</p>
+      </div>
+    </div>
+  </body>
+</html>

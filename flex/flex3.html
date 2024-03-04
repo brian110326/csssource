@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        border: 2px solid;
+        justify-content: space-evenly;
+        height: 400px;
+      }
+      .container div {
+        width: 100px;
+        height: 100px;
+      }
+      .item:first-child {
+        background-color: red;
+      }
+      .item:nth-child(2) {
+        background-color: orange;
+      }
+      .item:nth-child(3) {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        레이아웃 : 위-아래 수직 구성(스크롤 사용)
+
+        1. 수평(왼 => 오)
+        1) float
+        2) inline-block
+        3) flex
+            flex-direction(방향) : row(기본: 왼=>오), column(위=>아래), row-reverse, column-reverse
+            flex-wrap(여러개의 줄 허용 여부) : wrap, nowrap(기본값 : 한줄로), wrap-reverse(여러 줄로 이동시 맨첫번째 요소부터)
+            justify-content(주 축 정렬) : flex-start(기본왼쪽정렬), flex-end(기본오른쪽정렬), center, space-between, space-around, space-evenly
+              주축 : 요소가 배치되는 방향(flex-direction: row ==> 가로축이 주축, flex-direction: column ==> 세로축이 주축)
+              보조축 : 주축과 수직으로 교차되는 축
+            align-contenta(교차 축 정렬)
+     -->
+    <div class="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consequatur porro repudiandae dolorum natus perspiciatis explicabo expedita et,
+      sunt illum optio facere beatae odio! Impedit atque debitis ipsum illum accusamus.
+    </p>
+  </body>
+</html>

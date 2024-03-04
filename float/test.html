@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      header {
+        background-color: #333;
+        padding: 30px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+      nav {
+        height: 500px;
+        background-color: #ccc;
+        padding: 20px;
+        width: 30%;
+        float: left;
+      }
+      article {
+        height: 500px;
+        background-color: #f1f1f1;
+        padding: 20px;
+        width: 70%;
+        float: right;
+      }
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Cities</h2>
+    </header>
+    <section class="clearfix">
+      <nav>
+        <ul>
+          <li><a href="#">London</a></li>
+          <li><a href="#">Paris</a></li>
+          <li><a href="#">Tokyo</a></li>
+        </ul>
+      </nav>
+      <article>
+        <h1>London</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sint omnis quam quod quia facere adipisci cumque expedita vitae, optio id,
+          labore quasi voluptatibus fugiat eaque exercitationem sed voluptates impedit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quae quod eveniet minima enim error maiores quia possimus. Reiciendis
+          fugiat voluptate et totam maiores dolor necessitatibus nesciunt sed blanditiis sapiente in quas, sit, alias vel cupiditate, tempora ipsum
+          cum amet id voluptatum eum! Impedit dolores facilis omnis harum cupiditate cum voluptates, quas fuga aut totam officiis. Quia repellendus,
+          ea magni dignissimos accusamus harum excepturi architecto animi a nesciunt velit ut quaerat debitis sequi iure perferendis ullam esse
+          quibusdam vero consequuntur mollitia cum tempore sed? Accusantium rem quo eligendi quaerat vero, et cumque tempore, ex id dolorum amet, nisi
+          dignissimos quia?
+        </p>
+      </article>
+    </section>
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>
