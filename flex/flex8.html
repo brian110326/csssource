@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 요소 크기 산정시 border 포함 */
+      * {
+        box-sizing: border-box;
+      }
+      /* body 배경색 #ecf0f1 */
+      body {
+        background-color: #ecf0f1;
+      }
+      /* wrapper max-width 60rem width:100% margin 2rem auto */
+      .wrapper {
+        max-width: 60rem;
+        width: 100%;
+        margin: 2rem auto;
+      }
+      /* flexbg : flex 컨테이너 설정 */
+      .flexbg {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .flexbg .left {
+        background-color: #3498db;
+        order: 1;
+      }
+      .flexbg main {
+        background-color: white;
+        width: 60%;
+        padding: 1.618rem;
+        order: 2;
+      }
+      .flexbg .right {
+        background-color: #34495e;
+        order: 3;
+      }
+      .sidebar {
+        width: 20%;
+        padding: 1.618rem;
+        color: white;
+      }
+
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          flex-wrap: wrap;
+        }
+        main {
+          width: 100%;
+          order: 1;
+        }
+        .sidebar {
+          width: 50%;
+        }
+        .left {
+          order: 2;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas non quia voluptatibus provident nemo modi doloremque asperiores fuga
+          aspernatur alias tempora id possimus assumenda magnam dolor porro odit natus, voluptatum laboriosam! Ratione explicabo quisquam, beatae
+          reiciendis officia similique laborum veritatis corrupti in obcaecati fuga magni asperiores quos quas non animi omnis ipsum doloremque? Vero,
+          deserunt quos quae quibusdam velit officiis reiciendis modi minima possimus, obcaecati quis corporis mollitia quas eaque eos et
+          exercitationem. A dolorem, quibusdam aut laborum quo odio temporibus ipsam! Facilis tenetur delectus incidunt quasi quibusdam consectetur
+          cum, error ipsam quo asperiores eaque autem omnis aut tempore id.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta est reiciendis magni quam. Voluptas asperiores odio, tempora porro
+          officia consectetur quidem commodi vel eum eos voluptate architecto quos animi maiores dolor suscipit rem minus blanditiis aliquid eaque!
+          Corporis rem eos cumque repudiandae consequuntur, officia, velit ducimus, laborum nobis aliquam odit tempore molestias quaerat molestiae
+          facere. Necessitatibus ab porro esse quia. Sint hic sequi dicta dignissimos est, non pariatur eveniet enim veritatis voluptatem quisquam
+          cumque veniam aliquam libero optio eaque sed voluptate, mollitia magnam iusto culpa aspernatur maiores! Fuga voluptatem delectus soluta
+          explicabo veniam dolor praesentium suscipit quos deleniti quo!
+        </p>
+      </main>
+      <aside class="sidebar left">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, officia eius. Corporis ratione quibusdam corrupti nisi in natus sit iste.
+          Consequatur, impedit a cum quae quam modi delectus sint temporibus cumque neque laudantium beatae praesentium. Accusamus voluptas nemo
+          voluptatibus doloribus, nesciunt tempore sed iste, quod corporis temporibus maiores, commodi magnam!
+        </p>
+      </aside>
+      <aside class="sidebar right">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, officia eius. Corporis ratione quibusdam corrupti nisi in natus sit iste.
+          Consequatur, impedit a cum quae quam modi delectus sint temporibus cumque neque laudantium beatae praesentium. Accusamus voluptas nemo
+          voluptatibus doloribus, nesciunt tempore sed iste, quod corporis temporibus maiores, commodi magnam!
+        </p>
+      </aside>
+    </div>
+  </body>
+</html>
